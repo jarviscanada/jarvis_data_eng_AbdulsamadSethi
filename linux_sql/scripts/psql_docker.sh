@@ -33,7 +33,7 @@ case $state in
 
 	  docker pull postgres
 	  docker volume create pgdata
-	  docker run --name $container -e POSTGRES_PASSWORD=${db_pass} -e POSTGRES_USER=${db_user} -d -v pgdata:/var/lid/postgressql/data -p 5432:5432 postgres
+	  docker run --name $container -e POSTGRES_USER=$db_user -e POSTGRES_PASSWORD=$db_pass -d -v pgdata:/var/lid/postgressql/data -p 5432:5432 postgres
 	  exit $?
 	;;
 
