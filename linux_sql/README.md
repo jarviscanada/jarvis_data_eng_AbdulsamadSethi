@@ -17,24 +17,34 @@ that was created. The technologies used to create this tool are as follows:
 
 * Create a PostgreSQL instance using `psql_docker.sh`
 
-`./scripts/psql_docker.sh create [username] [password]`
+```
+./scripts/psql_docker.sh create [username] [password]
+```
 
 
 * Start/Stop a PostgreSQL instance using `psql_docker.sh`
 
-`./scripts/psql_docker.sh start|stop`
+```
+./scripts/psql_docker.sh start|stop
+```
 
 * Create database table that will contain hardware specification and resource usage using `ddl.sql`
 
-`psql -h localhost -U [username] -d [database -f sql/ddl.sql`
+```
+psql -h localhost -U [username] -d [database -f sql/ddl.sql
+```
 
 * Retrieve and insert hardware specifications into the database using `host_info.sh`
 
-`./scripts/host_info.sh localhost 5432 [database] [username] [password]`
+```
+./scripts/host_info.sh localhost 5432 [database] [username] [password]
+```
 
 * Retrieve and insert resource usage into the database using `host_usage.sh`
 
-`./scripts/host_usage.sh localhost 5432 [database] [username] [password]`
+```
+./scripts/host_usage.sh localhost 5432 [database] [username] [password]
+```
 
 * Implementing `host_usage.sh` automation with `crontab`
 
