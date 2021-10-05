@@ -78,7 +78,35 @@ the data into the PSQL database tables.
 ## Architecture
 
 ## Scripts
+* `psql_docker.sh`
+  * This script allows for 3 input arguments `create|start|stop [username] [password]`
+  * Use `create` when you want to create a PostgreSQL instance provisioned by Docker. Whenever this command is triggered,
+  the script will check if a container with the name (jrvs-psql) already exists on the server. If it doesn't already exist,
+  it will create a new container with the designated name.
+  * Use `start` after a PostgreSQL database is already created to start running the Docker container.
+  * Use `stop` to halt the active/running Docker container that has the PostgreSQL database within it.
+  * Use `username` and `password` arguments when using the `create` command. You can choose whatever username or password 
+  for the PostgreSQL database. It is preferred to have `username=postgres` and `password=password`.
+   ```
+   # Creating a PSQL docker container with the given username and password
+  ./scripts/psql_docker.sh create [username] [password]
+  
+  # Start PSQL docker container
+  ./scripts/psql_docker.sh start
+  
+  # Stop PSQL docker container
+  ./scripts/psql_docker.sh stop
+   ```
+  
+* `host_info.sh`
+  * This script is used to analyze the hardware specifications of the server and then store it in the `host_info.sh` table 
+  in the database.
+  ```
+  # Get hardware specifications and insert them into the host_info table within the PSQL database
+  ./scripts/host_info.sh localhost 5432 [database][username][password]
+  ```
 
+    
 ## Database Modeling
 
 # Test
