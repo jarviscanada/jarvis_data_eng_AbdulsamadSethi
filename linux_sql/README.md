@@ -38,11 +38,13 @@ that was created. The technologies used to create this tool are as follows:
 
 *Implementing `host_usage.sh` automation with `crontab`
 
-`# Open crontab editor to create a new job`
-`crontab -e`
+```
+# Open crontab editor to create a new job
+crontab -e
 
-`Add the line to the open editor to collect the usage data every minute`
-`***** [full file path to]/linux_sql/scripts/host_usage.sh local 5432 [databae] [username] [password]`
+# Add the line to the open editor to collect the usage data every minute
+***** [full file path to]/linux_sql/scripts/host_usage.sh local 5432 [databae] [username] [password]
+```
 
 # Implementation
 
