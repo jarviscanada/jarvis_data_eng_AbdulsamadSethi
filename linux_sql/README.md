@@ -31,7 +31,7 @@ that was created. The technologies used to create this tool are as follows:
 * Create database table that will contain hardware specification and resource usage using `ddl.sql`
 
 ```
-psql -h localhost -U [username] -d [database -f sql/ddl.sql
+psql -h localhost -U [username] -d [database] -f sql/ddl.sql
 ```
 
 * Retrieve and insert hardware specifications into the database using `host_info.sh`
