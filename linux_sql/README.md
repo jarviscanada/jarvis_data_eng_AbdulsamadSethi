@@ -106,6 +106,23 @@ the data into the PSQL database tables.
   ./scripts/host_info.sh localhost 5432 [database][username][password]
   ```
 
+* `host_usage.sh`
+  * This script is used to analyze the resource usage of the server and then store it in the PSQL database
+  ```
+  # Get resource usage information and insert them into the host_usage table within the PSQL database
+  ./scripts/host_usage.sh localhost 5432 [database][username][password]
+  ```
+* `crontab`
+  * Allows
+  ```
+  
+  ```
+* `queries.sql`
+  * This script
+  1. A
+  2. A
+  3. A
+
     
 ## Database Modeling
 
