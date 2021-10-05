@@ -47,6 +47,23 @@ crontab -e
 ```
 
 # Implementation
+* To run this project, you must first provision a PostgreSQL database using docker. This is all
+completed within the `psql_docker.sh` script. This script asks for 3 input arguments when creating a 
+database, the first one will be either `create`, `start`, or `stop` (in this case use `create`) a 
+provision of a PostgreSQL database, and the following input arguments are the `username` and `password`
+of PostgreSQL database on this server.
+* After the creation of the database, you must start the docker container, by running the `psql_docker.sh` again
+, but this time using the `start` input argument.
+* Once the docker container of the PSQL database is active and running, you can now proceed with creating and 
+implementing the tables for the database by running the `ddl.sql` script.
+* After the tables are successfully created, the database is now ready to be populated with the hardware 
+specifications and resource usage of the server by executing both `host_info.sh` and `host_usage.sh` scripts
+* The `host_info.sh` script is used to collect the hardware specifications using the `lscpu` command and then inserting
+the values into the PSQL database tables. 
+* The `host_usage.sh` script collects the real time usage of the server using the `vmstat` command and then inserting
+the data into the PSQL database tables.
+  * `host_usage.sh` can be automated using `contrab`. This will allow the user to see the CPU usages in real time, which
+  will ultimately allow for better maintenance or monitoring of any server.
 
 ## Architecture
 
