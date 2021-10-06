@@ -76,7 +76,7 @@ the data into the PSQL database tables.
   will ultimately allow for better maintenance or monitoring of any server.
 
 ## Architecture
-
+![Architectural Diagram](/assets/Diagram.png)
 ## Scripts
 * `psql_docker.sh`
   * This script allows for 3 input arguments `create|start|stop [username] [password]`
