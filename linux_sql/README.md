@@ -113,18 +113,53 @@ the data into the PSQL database tables.
   ./scripts/host_usage.sh localhost 5432 [database][username][password]
   ```
 * `crontab`
-  * Allows
+  * Allows for the `host_usage.sh` script to analyze real time information about the servers resource
+  usage and then update the host_usage table by executing that script every minute.
   ```
-  
+   # Open contrab editor to create a new job
+  contrab -e
+
+  # Add the line to the open editor to collect the usage data every minute
+  [full file path to]/linux_sql/scripts/host_usage.sh localhost 5432 [database] [username] [password]
+
+  # To check if the crontab implementation was successful use this command to ensure that the job is running
+  crontab -l
   ```
 * `queries.sql`
-  * This script
-  1. A
-  2. A
-  3. A
+  * This script contains some useful queries that help some questions about the resource planning and host information: 
+  1. Group hosts by number of CPUs and total memory size in descending order
+  2. Get the average memory usage percentage in 5 minute intervals for each host
+  3. Detect if a host has failed during a crontab job. 
 
     
 ## Database Modeling
+The `host_info` table contains/stores all the hardware specifications of each node/server. The table schema is as 
+follows:
+
+| Field Name      |                          Description                                                            |
+|:-----------:    |:--------------------------------------------------------:                                       |
+|id               |Unique identifier for each host machine that is auto-incremented                                 |
+|hostname         |Unique name for each host                                                                        |
+|cpu_number       |Number of CPU cores                                                                              |
+|cpu_architecture |Name of CPU architecture                                                                         |
+|cpu_model        |Name of CPU model                                                                                |
+|cpu_mhz          |Clock speed of the CPU in MHz                                                                    |
+|L2_cache         |Size of Level 2 cache memory in kB                                                               |
+|total_mem        |Size of total memory on host                                                                     |
+|timestamp        |Time of when host_info specifications were recorded in `Year-Month-Day Hour:Minute:Second` format|
+
+The `host_usage` table contains/stores all the resource usage information (which is updated every minute) 
+The table schema is as follows:
+
+| Field Name      |                          Description                                                            |
+|:-----------:    |:--------------------------------------------------------:                                       |
+|timestamp        |Time of when host_info specifications were recorded in `Year-Month-Day Hour:Minute:Second` format|
+|host_id          |Host identifier that corresponds to the one present in the `host_info` table                     |
+|memory_free      |Amount of available memory space                                                                 |
+|cpu_idle         |Percentage of time that CPU is in idle state                                                     |
+|cpu_kernel       |Percentage of time CPU is running in kernel mode                                                 |
+|disk_io          |Number of disks undergoing Input/Output processes                                                |
+|disk_available   |Amount of available space in the disk's root directory in MB                                     |
 
 # Test
 
