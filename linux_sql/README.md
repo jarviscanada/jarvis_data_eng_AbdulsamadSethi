@@ -162,7 +162,34 @@ The table schema is as follows:
 |disk_available   |Amount of available space in the disk's root directory in MB                                     |
 
 # Test
+The bash scripts were all tested manually through the linux shell. The following scripts that were tested are listed 
+below: 
+* `psql_docker.sh`
+* `host_info.sh`
+* `host_usage.sh`
 
+To test the SQL queries and files, the following steps had to be taken:
+1. First, the `ddl.sql` file had to be tested manually by executing it in the linux shell. 
+    ```
+   # Open the PSQL editor to check if the database is created
+   psql -h localhost -U [username] -W
+    ```
+2. Then, to check if the table within the `ddl.sql` file are created successfully, you can use following command:
+    ```
+    # List all tables to confirm if tables have been created
+   postgres = # \dt
+    ```
+3. Finally, to test the queries within `queries.sql`, synthetic data is inserted into a mock database and runs the 
+queries. This allows the results produced to be compared to the expected results.
 # Development
-
-# Improvements
+The application was deployed with the use of GitHub, Docker and Crontab.
+* GitHub allowed for the implementation of this project to be available to clients with a very in-depth README.md for 
+instructions.
+* Docker was used to create a container that provisioned a PSQL instance that is able to run the project locally.
+* Crontab was used to automate `host_usage.sh`, which allowed the resource usage of the CPU to be viewed in real-time.
+* # Improvements
+Some future improvements that could be implemented are:
+* An alert system that goes off when SQL queries detects that the server has failed. This will allow for better maintenance 
+of the server.
+* Find a way to make the reports of the resource usage data more readable. This can be done in many ways, such as storing 
+the data within a JSON file.
