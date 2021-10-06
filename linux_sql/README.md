@@ -116,7 +116,7 @@ the data into the PSQL database tables.
   * Allows for the `host_usage.sh` script to analyze real time information about the servers resource
   usage and then update the host_usage table by executing that script every minute.
   ```
-   # Open contrab editor to create a new job
+  # Open contrab editor to create a new job
   contrab -e
 
   # Add the line to the open editor to collect the usage data every minute
@@ -153,7 +153,7 @@ The table schema is as follows:
 
 | Field Name      |                          Description                                                            |
 |:-----------:    |:--------------------------------------------------------:                                       |
-|timestamp        |Time of when host_info specifications were recorded in `Year-Month-Day Hour:Minute:Second` format|
+|timestamp        |Time of when host_usage information was recorded in `Year-Month-Day Hour:Minute:Second` format|
 |host_id          |Host identifier that corresponds to the one present in the `host_info` table                     |
 |memory_free      |Amount of available memory space                                                                 |
 |cpu_idle         |Percentage of time that CPU is in idle state                                                     |
