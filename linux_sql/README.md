@@ -77,7 +77,7 @@ the data into the PSQL database tables.
 
 ## Architecture
 
-![Architecture Diagram](/assets/Diagram.png)
+![Architecture Diagram](./assets/Diagram.png)
 
 ## Scripts
 * `psql_docker.sh`
