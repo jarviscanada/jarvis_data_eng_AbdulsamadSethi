@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS public.host_info
 -- Create 'host_usage' to store all resource usage information
 CREATE TABLE IF NOT EXISTS public.host_usage
 (
-    "timestamp"         TIMESTAMP NOT NULL,
+    timestamp           TIMESTAMP NOT NULL,
     host_id             SERIAL NOT NULL,
     memory_free         INT NOT NULL,
     cpu_idle            INT NOT NULL,
