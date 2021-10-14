@@ -105,7 +105,7 @@ public interface LambdaStreamExc {
      * @param suffix suffix str
      * @return
      */
-    Consumer<Stream> getLambdaPrinter(String prefix, String suffix);
+    Consumer<String> getLambdaPrinter(String prefix, String suffix);
 
     /**
      * Print each message with a given printer
