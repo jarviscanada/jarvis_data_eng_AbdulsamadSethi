@@ -14,7 +14,7 @@ are listed below:
 
 # Implementaiton
 ## ER Diagram
-![ Diagram ](./assets/er%20diagram.png "ER Diagram")
+![ Diagram ](./assets/er_diagram.png "ER Diagram")
 
 ## Design Patterns
 ### DAO (Data Access Object) Pattern
