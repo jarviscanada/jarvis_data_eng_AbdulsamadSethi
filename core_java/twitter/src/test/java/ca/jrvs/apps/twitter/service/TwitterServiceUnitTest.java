@@ -32,13 +32,13 @@ public class TwitterServiceUnitTest {
         String text = "Some text";
         Double lat = 1.0d;
         Double lon = 1.0d;
-        Tweet tweet = service.postTweet(TweetUtil.buildTweet(text, lat, lon));
+        Tweet tweet = service.postTweet(TweetUtil.createTweet(text, lat, lon));
         assertNotNull(tweet);
 
         String invalidText = new String(new char[140]).replace('\0', ' ');
 
         invalidText = invalidText + " " + System.currentTimeMillis();
-        Tweet invalidTweet = TweetUtil.buildTweet(invalidText, lat, lon);
+        Tweet invalidTweet = TweetUtil.createTweet(invalidText, lat, lon);
 
         try {
             service.postTweet(invalidTweet);
@@ -48,7 +48,7 @@ public class TwitterServiceUnitTest {
         }
 
         Double invalidLat = 200d;
-        invalidTweet = TweetUtil.buildTweet(text, invalidLat, lon);
+        invalidTweet = TweetUtil.createTweet(text, invalidLat, lon);
 
         try {
             service.postTweet(invalidTweet);
@@ -58,7 +58,7 @@ public class TwitterServiceUnitTest {
         }
 
         Double invalidLon = 200d;
-        invalidTweet = TweetUtil.buildTweet(text, lat, invalidLon);
+        invalidTweet = TweetUtil.createTweet(text, lat, invalidLon);
 
         try {
             service.postTweet(invalidTweet);
