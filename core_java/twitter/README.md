@@ -15,8 +15,19 @@ follow:
 - Docker
 
 # Quick Start
-Before running the application the user must obtain the API key, API secret key, Access Token,
-and Secret Token from the Twitter API.
+Before running the application  you must set environment variables for Twitter authentication.
+- Twitter Consumer API Key (consumerKey)
+- Twitter Consumer API Secret Key (consumerSecret)
+- Twitter Access Token (accessToken)
+- Twitter Access Token Secret (tokenSecret)
+
+An example of the command for setting these variables is as follows:
+
+```shell
+$ export consumerKey = 'YOUR_VALUE'
+```
+
+To run the application after, use the following command:
 
 - Usage: `TwitterCLIApp post|show|delete [options]`
 
