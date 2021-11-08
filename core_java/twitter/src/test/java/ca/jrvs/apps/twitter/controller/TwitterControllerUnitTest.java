@@ -35,7 +35,7 @@ public class TwitterControllerUnitTest {
         String text = "some text";
         Double lat = 1.0d;
         Double lon = 1.0d;
-        when(service.postTweet(any())).thenReturn(TweetUtil.buildTweet(text, lat, lon));
+        when(service.postTweet(any())).thenReturn(TweetUtil.createTweet(text, lat, lon));
         String[] args = {"post", text, lat + ":" + lon};
         tweet = controller.postTweet(args);
         assertNotNull(tweet);

@@ -42,7 +42,7 @@ public class TwitterServiceIntTest {
         String text = "Helloworld! " + hashtag + " " + System.currentTimeMillis();
         Double lat = 1d;
         Double lon = -1d;
-        Tweet tweet = TweetUtil.buildTweet(text, lat, lon);
+        Tweet tweet = TweetUtil.createTweet(text, lat, lon);
         testTweet = twitterService.postTweet(tweet);
     }
 
@@ -62,7 +62,7 @@ public class TwitterServiceIntTest {
         String text = "Helloworld! " + hashtag + " " + System.currentTimeMillis();
         Double lat = 1d;
         Double lon = -1d;
-        Tweet tweet = TweetUtil.buildTweet(text, lat, lon);
+        Tweet tweet = TweetUtil.createTweet(text, lat, lon);
 
         Tweet postedTweet = twitterService.postTweet(tweet);
 
@@ -78,7 +78,7 @@ public class TwitterServiceIntTest {
 
         String longText = new String(new char[140]).replace('\0', ' ');
         longText = longText + System.currentTimeMillis();
-        Tweet invalidTweet = TweetUtil.buildTweet(longText, lat, lon);
+        Tweet invalidTweet = TweetUtil.createTweet(longText, lat, lon);
 
         try {
             twitterService.postTweet(invalidTweet);
@@ -88,7 +88,7 @@ public class TwitterServiceIntTest {
         }
 
         Double invalidLat = 200d;
-        invalidTweet = TweetUtil.buildTweet(text, invalidLat, lon);
+        invalidTweet = TweetUtil.createTweet(text, invalidLat, lon);
 
         try {
             twitterService.postTweet(invalidTweet);
@@ -98,7 +98,7 @@ public class TwitterServiceIntTest {
         }
 
         Double invalidLon = 100d;
-        invalidTweet = TweetUtil.buildTweet(text, lat, invalidLon);
+        invalidTweet = TweetUtil.createTweet(text, lat, invalidLon);
 
         try {
             twitterService.postTweet(invalidTweet);
@@ -137,7 +137,7 @@ public class TwitterServiceIntTest {
             assertTrue(true);
         }
 
-        String[] invalidIds = new String[]{"nikki"};
+        String[] invalidIds = new String[]{"Abdul"};
         try {
             twitterService.deleteTweets(invalidIds);
             fail();

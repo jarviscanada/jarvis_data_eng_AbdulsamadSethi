@@ -45,7 +45,7 @@ public class TwitterControllerIntTest {
         String text = "Helloworld! " + hashtag + " " + System.currentTimeMillis();
         Double lat = 1d;
         Double lon = -1d;
-        tweet = TweetUtil.buildTweet(text, lat, lon);
+        tweet = TweetUtil.createTweet(text, lat, lon);
         tweet = twitterService.postTweet(tweet);
     }
 
@@ -65,7 +65,7 @@ public class TwitterControllerIntTest {
         String text = "Helloworld! " + hashtag + " " + System.currentTimeMillis();
         Double lat = 1d;
         Double lon = -1d;
-        Tweet tweet = TweetUtil.buildTweet(text, lat, lon);
+        Tweet tweet = TweetUtil.createTweet(text, lat, lon);
 
         String[] args = new String[]{"post",text,lat + ":" + lon};
         newTweet = controller.postTweet(args);

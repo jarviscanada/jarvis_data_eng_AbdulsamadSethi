@@ -38,7 +38,7 @@ public class TwitterDaoIntTest {
         String text = "Helloworld! " + hashtag + " " + System.currentTimeMillis();
         Double lat = 1d;
         Double lon = -1d;
-        testTweet = dao.create(TweetUtil.buildTweet(text, lat, lon));
+        testTweet = dao.create(TweetUtil.createTweet(text, lat, lon));
     }
 
     @After
@@ -56,7 +56,7 @@ public class TwitterDaoIntTest {
         String text = "Helloworld! " + hashtag + " " + System.currentTimeMillis();
         Double lat = 1d;
         Double lon = -1d;
-        Tweet tweet = TweetUtil.buildTweet(text, lat, lon);
+        Tweet tweet = TweetUtil.createTweet(text, lat, lon);
 
         Tweet postedTweet = dao.create(tweet);
 
