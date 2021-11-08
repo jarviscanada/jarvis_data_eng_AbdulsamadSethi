@@ -7,7 +7,9 @@ import ca.jrvs.apps.twitter.util.TweetUtil;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 
+@org.springframework.stereotype.Controller
 public class TwitterController implements Controller {
 
     private static final String COORD_SEP = ":";
@@ -15,7 +17,7 @@ public class TwitterController implements Controller {
 
     private Service service;
 
-    //@Autowired
+    @Autowired
     public TwitterController(Service service) { this.service = service; }
 
     /**

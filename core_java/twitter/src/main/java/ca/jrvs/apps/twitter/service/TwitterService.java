@@ -5,12 +5,14 @@ import ca.jrvs.apps.twitter.model.Tweet;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 
+@org.springframework.stereotype.Service
 public class TwitterService implements Service {
 
     private CrdDao dao;
 
-    //@Autowired
+    @Autowired
     public TwitterService(CrdDao dao) { this.dao = dao; }
 
     @Override

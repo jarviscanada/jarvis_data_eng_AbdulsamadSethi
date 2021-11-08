@@ -16,7 +16,9 @@ import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpMethod;
+import org.springframework.stereotype.Component;
 
+@Component
 public class TwitterHttpHelper implements HttpHelper {
 
     static final Logger logger = LoggerFactory.getLogger(TwitterHttpHelper.class);
