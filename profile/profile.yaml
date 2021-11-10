@@ -5,7 +5,7 @@ github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_Abdulsamad
 
 # Introduce yourself, your academic and professional background.
 # What excites you about the software industry and your passion. At least 80 words
-summary: I am a recent graduate from Ryerson University where I received my Bachelor of Engineering, majoring in Computer Engineering. Throughout my education at Ryerson University, I developed strong analytical, problem solving and coding skills. Furthermore, I have a strong fundamental understanding of Data Structures and Algorithms. I began to take interest in Data engineering in my final year at Ryerson University and quickly discovered that it includes all aspects of software development that I am passionate about. I developed multiple projects at Ryerson most notably an AI Personal Trainer that was able to collect data in real-time and give the user feedback on their workout routine. I believe myself to be a hardworking and highly motivated individual that enjoys being challenged when engaging with projects that require me to learn new programming languages and development techniques. I believe that clear communication streams and increased transparency can help organizations build highly efficient, confident and successful teams that are capable of creating the desired products for the consumers. Ultimately, I feel that my strong academic background in Computer and Data Engineering will enable me to excel and have a meaningful contribution to your team.  
+summary: I am a recent graduate from Ryerson University, where I received my Bachelor of Engineering, majoring in Computer Engineering. Throughout my education at Ryerson University, I developed strong analytical, problem-solving and coding skills. Furthermore, I have a strong fundamental understanding of Data Structures and Algorithms. I began to take an interest in Software and Data engineering in my final year at Ryerson University and quickly discovered that it includes all aspects of software development that I am passionate about. I developed multiple projects at Ryerson, most notably an AI Personal Trainer that collected data in real-time and gave the user feedback on their workout routine. I believe myself to be a hardworking and highly motivated individual that enjoys being challenged when engaging with projects that require me to learn new programming languages and development techniques. I believe that clear communication streams and increased transparency can help organizations build highly efficient, confident and successful teams capable of creating the desired products for the consumers. Ultimately, I feel that my strong academic background in Computer and Data Engineering will enable me to excel and have a meaningful contribution to your team.
 
 # Group your skills by level.
 # Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
@@ -13,15 +13,15 @@ skills:
   # At least 5 skills
   proficient:
     - Java
+    - Python
+    - C
     - Linux/Bash
     - RDBMS/SQL
-    - Agile/Scrum
-    - Git
-    - C
-    - MATLAB
-    - VHDL
-    - Python
     - HTML
+    - Git
+    - MATLAB
+    - Agile/Scrum
+    - VHDL
     - Docker
   # At least 5 skills
   competent:
@@ -63,7 +63,7 @@ highlighted_projects:
     description: Designed an Python application where a user can follow along an exercise routine by a trainer on a video, and dynamically receive real-time feedback on quality of form as a score. Developed application's body tracking algorithm in Python using OpenCV and TensorFlow. Implemented neural networking and dynamic time warping to compute real-time user scoring metrics.
   - name: "Peer-to-Peer Application"
     git_url:
-    description: Developed an C application that allows files and media to be exchanged among connected peer networks. Implemented UDP and TCP connections with an index server and peer networks using sockets in C. Integrated functionalities that allowed the user to upload and delete files that are shared with other connected peer networks via the index server.
+    description: Developed a C application that allows files and media to be exchanged among connected peer networks. Implemented UDP and TCP connections with an index server and peer networks using sockets in C. Integrated functionalities allow the user to upload and delete files shared with other connected peer networks via the index server.
   - name: "Music Database"
     git_url: 
     description: Created a Music Database with SQLite that allowed the user to search for any information about an album, artist, or song through executed user queries. Translated the SQLite database into an XML schema allowing for better visualization of the user queries.
