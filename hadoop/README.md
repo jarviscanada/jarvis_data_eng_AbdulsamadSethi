@@ -18,6 +18,7 @@ use of OpenCSVSerDe, Partitioning and Columnar(parquet).
 ## Cluster architecture diagram
 
 ## Master Worker/Master-Slave/Map-Reduce Pattern
+Used for parallel processing and allows applications to perform simultaneous processing across multiple machines.
 
 ### Master Node Hardware Specs
 
